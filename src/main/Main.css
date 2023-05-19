@@ -1,149 +1,257 @@
-.cat-gpt-msgs {
+/* Outer */
+.won-wrapper {
     width: 100%;
-    height: 80%;
+    height: auto;
+
+    margin-top: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+
+    position: relative;
+}
+
+.won-main-container {
+    width: auto;
+    height: 90%;
+
+    position: relative;
+
+    flex-grow: 1;
 
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: top;
-
-    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
 }
 
-.cat-gpt-msgs::-webkit-scrollbar {
+.won-info-container {
+    width: 40%;
+    max-width: 20em;
+    height: 90%;
+
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.won-info-container-hidden div:not(:first-child) {
     display: none;
 }
 
-.cat-gpt-input-container {
+.won-function-button {
+    width: 130px;
+    height: auto;
+
+    margin: 5px 6px;
+    padding: 5px;
+
+    border: none;
+    border-radius: 69420px;
+    outline: none;
+    background-color: var(--lavender-pastel-1);
+
+    font: inherit;
+    font-size: var(--h4-font-size);
+    color: white;
+    font-family: var(--text-font);
+
+    cursor: pointer;
+
+    transition: 0.4s ease;
+}
+
+.won-function-button:hover {
+    background-color: var(--lavender-pastel-2);
+}
+
+/* Wheel section */
+.won-wheel-container {
+    width: auto;
+    height: 80%;
+
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    > div {
+        max-height: 35em;
+        max-width: 35em;
+
+        transition: 0.4s ease;
+    }
+}
+
+.won-spin-button {
+    position: absolute;
+    margin: auto;
+    z-index: 99;
+
+    width: 15%;
+    max-width: 100px;
+    height: auto;
+
+    margin: 20px;
+    padding: 10px 0px;
+
+    border: none;
+    border-radius: 69420px;
+    outline: none;
+    background-color: var(--lavender-pastel-1);
+
+    font: inherit;
+    font-weight: bold;
+    font-size: min(var(--h2-font-size), 3.5vw);
+    color: white;
+    font-family: var(--text-font);
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.4s ease;
+}
+
+.won-spin-button-spinning {
+    background-color: var(--lavender-pastel-3) !important;
+
+    cursor: default;
+}
+
+.won-spin-button:hover {
+    background-color: var(--lavender-pastel-2);
+}
+
+/* Info section */
+.won-info-header {
     width: 100%;
-    height: 18%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.won-info-body {
+    width: 100%;
+    height: 95%;
+}
+
+.won-info {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.won-info textarea {
+    width: 94%;
+    height: 240px;
+
+    padding: max(10px, 1.3%) max(16px, 1.3%);
+
+    border: none;
+    border-radius: 20px;
+    outline: transparent;
+    background: transparent;
+    background-color: var(--lavender-pastel-4);
+
+    font-family: var(--text-font);
+    font-size: var(--h4-font-size);
+
+    transition: 0.4s ease;
+
+    resize: none;
+}
+
+.won-info textarea::-webkit-scrollbar {
+    display: none;
+}
+
+/* History section */
+.won-history {
+    width: 100%;
+    height: auto;
+
+    font-family: var(--text-font);
+    font-size: var(--h2-font-size);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.won-history-header {
+    width: 100%;
+    height: auto;
+
+    font: inherit;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    background-color: var(--lavender-pastel-4);
-    border-radius: 10px;
 }
 
-/* Messages */
-.cat-gpt-chat-msg-container {
-    width: auto;
+.won-history-record {
+    width: 94%;
     height: auto;
+    max-height: 150px;
 
-    margin-bottom: 8px;
+    padding: max(10px, 1.3%) max(16px, 1.3%);
 
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-    justify-content: left;
-
-    transition: 0.4s ease;
-}
-
-.cat-gpt-chat-msg-container-user {
-    flex-direction: row-reverse;
-    justify-content: right;
-}
-
-.cat-gpt-chat-msg-img {
-    width: 48px;
-    height: 48px;
-
-    padding: 2px;
-    user-select: none;
-}
-
-.cat-gpt-chat-msg-content {
-    width: auto;
-    max-width: 80%;
-    height: auto;
-
-    padding: 6px 14px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: top;
-    justify-content: center;
-
-    font-family: var(--text-font);
+    font: inherit;
     font-size: var(--h4-font-size);
 
-    border-radius: 12px;
-
-    background-color: var(--pink-pastel-1);
-
-    overflow-wrap: break-word;
-}
-
-.cat-gpt-chat-msg-content img {
-    width: min(400px, 60vw);
-    max-height: 400px;
-
-    margin: 1% 0%;
-    object-fit: cover;
-
-    border-radius: 10px;
-}
-
-.cat-gpt-chat-msg-content div {
-    width: auto;
-    height: auto;
-
-    font-family: var(--text-font);
-    font-size: var(--h4-font-size);
-}
-
-.cat-gpt-chat-msg-content-user {
-    background-color: var(--yellow-pastel-1);
-}
-
-.cat-gpt-msgs-bottom-padding {
-    margin-bottom: 80px;
-}
-
-/* Input */
-.cat-gpt-input {
-    width: 90%;
-    height: 80%;
-
-    padding: 0px max(16px, 1.3%);
+    text-align: left;
 
     border: none;
+    border-radius: 20px;
     outline: transparent;
     background: transparent;
+    background-color: var(--lavender-pastel-4);
 
     font-family: var(--text-font);
     font-size: var(--h4-font-size);
 
-    resize: none;
+    transition: 0.4s ease;
+
+    overflow-y: scroll;
 }
 
-.cat-gpt-input::-webkit-scrollbar {
+.won-history-record::-webkit-scrollbar {
     display: none;
 }
 
-.cat-gpt-input-submit {
-    width: 50px;
+@media screen and (max-width: 1000px) {
+    .won-wrapper {
+        flex-direction: column;
+    }
 
-    padding: 1.5%;
-    margin-right: 5px;
-
-    cursor: pointer;
-    text-align: center;
-    color: var((--lavender-pastel-font-1));
-
-    transition: 0.3s ease;
+    .won-info-container {
+        width: 100% !important;
+        max-width: unset !important;
+    }
 }
 
-.cat-gpt-input-submit-blocked {
-    cursor: default;
-    color: var(--lavender-pastel-font-grayscale);
-}
+@media screen and (max-width: 1300px) {
+    .won-wheel-container {
+        > div {
+            max-height: 29em;
+            max-width: 29em;
 
-@media screen and (max-height: 400px) {
-    .cat-gpt-input-container {
-        height: 50px;
+            transition: 0.4s ease;
+        }
     }
 }
