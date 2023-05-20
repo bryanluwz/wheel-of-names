@@ -279,7 +279,7 @@ export default class WheelOfNames extends Component {
 								disableInitialAnimation
 								spinDuration={0.420}
 
-								pointerProps={{ src: process.env.PUBLIC_URL + "/images/shuba.png", style: { userSelect: "none" } }}
+								pointerProps={{ src: process.env.PUBLIC_URL + "/images/Wheel-Of-Names-assets/Wheel-Of-Names-pointer.png", style: { userSelect: "none" } }}
 
 								radiusLineWidth={0}
 								outerBorderColor="none"

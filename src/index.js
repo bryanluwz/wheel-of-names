@@ -7,6 +7,7 @@ import { RouterProvider, createHashRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createHashRouter([{
 	path: "/*",
+	basename: process.env.PUBLIC_URL,
 	element: <App />
 }]);
 
