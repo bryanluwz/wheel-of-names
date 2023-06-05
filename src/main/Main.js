@@ -208,7 +208,7 @@ export default class WheelOfNames extends Component {
 			.join("\n");
 		this.optionsInputTextareaRef.current.value = newTextareaValue;
 		this.setState({ canClearLast: false });
-		this.handleOptionsInputTextareaChange();
+		this.handleOptionsInputTextareaChange({ target: { value: newTextareaValue } });
 	};
 
 	handleHideButton = () => {
