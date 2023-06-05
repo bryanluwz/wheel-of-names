@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/wheel-of-names/static/css/main.a92fd0a2.css",
-    "main.js": "/wheel-of-names/static/js/main.8febb2b4.js",
+    "main.css": "/wheel-of-names/static/css/main.97924c46.css",
+    "main.js": "/wheel-of-names/static/js/main.f7c8119f.js",
     "static/media/lulo-font.ttf": "/wheel-of-names/static/media/lulo-font.cf6ce051896b18d3449b.ttf",
     "index.html": "/wheel-of-names/index.html",
-    "main.a92fd0a2.css.map": "/wheel-of-names/static/css/main.a92fd0a2.css.map",
-    "main.8febb2b4.js.map": "/wheel-of-names/static/js/main.8febb2b4.js.map"
+    "main.97924c46.css.map": "/wheel-of-names/static/css/main.97924c46.css.map",
+    "main.f7c8119f.js.map": "/wheel-of-names/static/js/main.f7c8119f.js.map"
   },
   "entrypoints": [
-    "static/css/main.a92fd0a2.css",
-    "static/js/main.8febb2b4.js"
+    "static/css/main.97924c46.css",
+    "static/js/main.f7c8119f.js"
   ]
 }
